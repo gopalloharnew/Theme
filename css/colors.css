@@ -1,0 +1,16 @@
+/* Global Colors */
+:root{
+    --accent: hsl(200, 100%, 50%);
+}
+
+/* Light Theme */
+:root, :root[data-theme="Light"]{
+    --body-bg: hsl(0, 0%, 100%);
+    --body-clr: hsl(0, 0%, 0%);
+}
+
+/* Dark Theme */
+:root[data-theme="Dark"]{
+    --body-bg: hsl(0, 0%, 10%);
+    --body-clr: hsl(0, 0%, 100%);
+}
