@@ -18,3 +18,72 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+/* Theme CSS */
+.theme-box{
+    position: relative;
+}
+
+
+.theme-btn{
+    width: 100%;
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0rem 0.8rem;
+    border: none;
+    border-radius: 0.1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--theme-opt-bg);
+    color: var(--body-clr);
+}
+
+/* Theme Drop Button */
+
+.theme-drop-btn{
+    transition: all 100ms ease;
+    --theme-opt-bg: transparent;
+}
+
+.theme-drop-btn:hover,
+.theme-box-open .theme-drop-btn{
+    --theme-opt-bg: inherit;
+}
+
+/* Theme Drop List */
+.theme-drop-list{
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 100ms ease;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--theme-opt-bg);
+}
+
+.theme-box-open .theme-drop-list{
+    display: block;
+    top: calc(2rem + 0.5rem);
+    pointer-events: all;
+    opacity: 1;
+}
+
+.theme-drop-list li{
+    list-style: none;
+}
+
+.theme-drop-list li:nth-of-type(2) .theme-drop-option{
+    margin: 0.25rem 0rem;
+}
+
+.theme-drop-option:not([data-active-theme-option]):hover{
+    --theme-opt-bg: var(--theme-opt-hover-bg);
+}
+
+[data-active-theme-option]{
+    --theme-opt-bg: var(--body-bg);
+}
