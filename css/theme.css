@@ -15,13 +15,14 @@ body{
     color: var(--body-clr);
     font-family: sans-serif;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 10vh 0vh;
 }
 
 /* Theme CSS */
 .theme-box{
     position: relative;
+    width: max-content;
 }
 
 
@@ -80,10 +81,10 @@ body{
     margin: 0.25rem 0rem;
 }
 
-.theme-drop-option:not([data-active-theme-option]):hover{
+.theme-drop-option:not(.active-theme-option):hover{
     --theme-opt-bg: var(--theme-opt-hover-bg);
 }
 
-[data-active-theme-option]{
+.active-theme-option{
     --theme-opt-bg: var(--body-bg);
 }
